@@ -53,6 +53,10 @@
   align-self: flex-end;
 }
 
+.signup{
+  margin-left: auto;
+}
+
 /************************************************/
 /*******************PHOTO GRID*******************/
 .photo-grid-container{
