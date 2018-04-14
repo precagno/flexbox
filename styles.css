@@ -1,75 +1,115 @@
+/********************************************/
+/********GENERAL CONFIGURATION***************/
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/**************************************/
-/*****************MENU*****************/
-.menu-container {
+/********************************************/
+/******************MENU**********************/
+.menu-container{
   color: #fff;
   background-color: #5995DA;  /* Blue */
-  padding: 20px 0;
-
-  /*FLEX*/
   display: flex;
-  justify-content: center;    /* Add this */
+  justify-content: center;
 }
 
-.menu {
-  /*border: 1px solid #fff;*/  /* For debugging */
-  width: 900px;
-  display: flex;
+.menu{
+  width:900px;
+  padding: 20px 0;
+  /*border: 1px solid #fff;*/
+  display:flex;
   justify-content: space-between;
 }
 
 .links{
-  /*border: 1px solid #fff;*/  /* For debugging */
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
 }
 
 .login{
-  margin-left: 30px;
+  margin-left: 15px;
 }
 
-/**************************************/
-/***************HEADER*****************/
+/********************************************/
+/*******************HEADER*******************/
 .header-container{
-  color: #5995DA;
-  background-color: #D6E9FE;
+  background-color: rgb(172, 177, 252);
   display: flex;
   justify-content: center;
 }
 
 .header{
   width: 900px;
-  height: 300px;
+  height: 200px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-/*.social,.logo,.subscribe{
-  border: 1px solid #5995DA;
-}*/
+.social,.subscribe{
+  margin-bottom:20px;
+  align-self: flex-end;
+}
 
-/**************************************/
-/***************PHOTO GRID*****************/
+/************************************************/
+/*******************PHOTO GRID*******************/
 .photo-grid-container{
   display: flex;
   justify-content: center;
 }
 
 .photo-grid{
-  width: 900px; 
+  width: 900px;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
 }
 
 .photo-grid-item{
-  border: 1px solid #fff;
   width: 300px;
   height: 300px;
+}
+
+.first-item {
+  order: 1;
+}
+
+.last-item {
+  order: -1;
+}
+
+/************************************************/
+/*********************FOOTER*********************/
+.footer{
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-item{
+  border: 1px solid #fff;
+  background-color: #D6E9FE;
+  height: 200px;
+  flex: 1;
+}
+
+/*All flexible items*/
+
+/*.footer-one{
+  flex: 1;
+}
+.footer-two{
+  flex: 1;
+}
+.footer-three{
+  flex: 2;
+}*/
+
+.footer-one,.footer-three{
+  background-color: #5995DA;
+  flex: initial;
+  width: 300px;
 }
