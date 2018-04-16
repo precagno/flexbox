@@ -4,61 +4,52 @@
   box-sizing: border-box;
 }
 
-.navigation{
-  list-style: none;
-  background-color: #00bfff;
-  display:flex;
-  justify-content: flex-end;
-  flex-flow: row wrap;
-}
-
-.navigation li{
+.wrapper{
+  display: flex;
+  flex-flow:row wrap;
+  font-weight: bold;
   text-align: center;
 }
 
-.navigation li:hover{
-  background-color: #09ade4;
-  transition: background-color 0.6s;
+.wrapper > *{
+  flex:1 100%;
+  padding: 25px 0;
 }
 
-.navigation li a{
-  text-decoration: none;
-  color:#fff;
-  font-weight: bold;
-  font-size: 1.2em;
-  display: block;
-  padding: 1em;
+.header{
+  background-color: tomato;
 }
 
-/********************************************************/
-/**********************MEDIA QUERIES*********************/
-@media screen and (min-width: 800px) {
-  .navigation li{
-    border-bottom: 3px solid transparent;
-  }
-  
-  .navigation li:hover{
-    border-bottom: 3px solid #ffa500;
+.main{
+  background-color: deepskyblue;
+}
+
+.aside-1{
+  background-color: gold;
+}
+
+.aside-2{
+  background-color: hotpink;
+}
+
+.footer{
+  background-color: lightgreen;
+}
+
+/**************************/
+/******MEDIA QUERIES*******/
+
+/* We tell both sidebars to share a row */
+@media all and (min-width: 600px) {
+  .aside{
+    flex:1 auto;
   }
 }
 
-@media screen and (max-width: 799px) {
-  .navigation{
-    justify-content: space-around;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .navigation{
-    flex-flow: column wrap;
-  }
-
-  .navigation li a{
-    border-top: 1px solid rgba(255, 255, 255, 0.3);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  }
-
-  .navigation li:last-of-type a {
-    border-bottom: none;
-  }
+@media all and (min-width: 800px) {
+  .main { flex: 2 0px; }
+  .aside-1 { order: 1; }
+  .main    { order: 2; }
+  .aside-2 { order: 3; }
+  .footer  { order: 4; }
 }
